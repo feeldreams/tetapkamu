@@ -246,6 +246,19 @@ blockquote p{margin-left:20px;margin-right:20px;font-size:19px;font-weight:700;l
                  
                  ftganti=1;ftmuncul();mulaiketik1();
        }
+	
+	async function ptawal(){
+var { isConfirmed: tny } = await swals.fire({
+    title: 'Lanjut Melihat Script Ini<br>atau<br>Script HTML Lainnya?',
+    confirmButtonText: 'Lanjut',
+    cancelButtonText: 'Lainnya',
+    showCancelButton: true,
+});
+if(!tny){
+  window.location.replace("https://web.feeldream.repl.co/");
+}
+  }
+    setTimeout(ptawal,500);
 </script>
 <!-- Sampai Sini -->
 </body>
